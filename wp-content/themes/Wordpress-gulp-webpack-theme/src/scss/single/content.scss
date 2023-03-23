@@ -1,0 +1,634 @@
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+	@media (max-width: #{$mobile -width - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+$col_right_rate: 590/ 1920 * 100%;
+$col_right_rate_1400: 411/ 1356 * 100%;
+.width-content {
+	margin: 0 auto;
+	max-width: max-content;
+}
+.text--center {
+	text-align: center;
+}
+.single {
+	// img.imgright { float: right; margin: 0 0 1em 1em;width: 500px;height: 500px;object-fit: cover; }
+	// img.imgleft { float: left; margin: 0 1em 1em 0;width: 500px;height: 500px;object-fit: cover; }
+	// img.imgcenter { display: block; margin-left: auto; margin-right: auto;width: 500px;height: 500px;object-fit: cover; }
+
+	.colum-left {
+		position: relative;
+		box-shadow: 1px -3px 6px 0px;
+		padding: 2rem;
+		.single-thumbnail {
+			position: relative;
+		}
+		.single__content {
+			padding: 2rem;
+			h1 {
+				font-size: 40px;
+				font-weight: 700;
+				font-family: vlabelpro;
+			}
+			h2 {
+				font-size: 32px;
+				font-weight: 700;
+				font-family: vlabelpro;
+			}
+			h3 {
+				font-size: 28px;
+				font-weight: 700;
+				font-family: vlabelpro;
+			}
+			h4 {
+				font-size: 24px;
+				font-weight: 700;
+				font-family: vlabelpro;
+			}
+			h5,
+			h6 {
+				font-size: 0.83em;
+				font-weight: 700;
+				font-family: vlabelpro;
+			}
+			img {
+				&.alignleft {
+					float: left;
+				}
+				&.aligncenter {
+					display: block;
+					margin: 0 auto;
+				}
+				&.alignright {
+					float: right;
+				}
+				margin-top: 20px;
+				margin-right: 30px;
+				max-width: 100%;
+				width: initial;
+				height: 490px;
+				object-fit: cover;
+			}
+		}
+	}
+	img.imgleft {
+		margin: 1em 1em 1em 0;
+		width: 500px;
+		height: 500px;
+		object-fit: cover;
+		@include MediaQuery(1400px) {
+			width: 400px;
+			height: 400px;
+			margin: 0 1em 0 0;
+		}
+		@include MediaQuery(1024px) {
+			width: 300px;
+			height: 300px;
+			margin: 0 1em 0 0;
+		}
+		@include MediaQuery(860px) {
+			width: 200px;
+			height: 200px;
+			margin: 0 1em 0 0;
+		}
+	}
+	img.imgcenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 500px;
+		height: 500px;
+		object-fit: cover;
+	}
+	&__banner-ads {
+		margin: 25px 0;
+		padding: 0 20px;
+		@include MediaQuery($xs) {
+			margin: 20px 0;
+		}
+	}
+	&-divide {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		padding: 0 120px;
+		padding-top: 35px;
+		@include MediaQuery(1600px) {
+			padding: 0 60px;
+		}
+		@include MediaQuery(1380px) {
+			padding: 0 35px;
+			padding-top: 0;
+		}
+		@include MediaQuery($xs) {
+			padding: 0 15px;
+		}
+		.colum-left {
+			position: relative;
+			box-shadow: 0px 0px 10px 0px #000;
+			padding: 50px 50px 85px;
+			@media screen and (min-width: 1600px) {
+				max-width: 1275px;
+				width: 100%;
+				flex: auto;
+			}
+<<<<<<< HEAD
+			@include MediaQuery($xs) {
+				padding: 10px 10px 0;
+=======
+			@include MediaQuery(860px) {
+				flex: 0 0 95%;
+				width: 95%;
+				margin: 0 auto;
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+			}
+			.single-thumbnail {
+				height: 400px; /* You must set a specified height */
+				background-position: center; /* Center the image */
+				background-repeat: no-repeat; /* Do not repeat the image */
+				background-size: cover;
+				position: relative;
+			}
+			.title-single h1 {
+				position: absolute;
+				bottom: 35px;
+				left: 0;
+				color: white;
+				font-size: 90px;
+				line-height: 90px;
+				width: 100%;
+				padding: 0 40px;
+				font-weight: 400;
+				z-index: 1;
+				font-family: SanFranciscoDisplay-Bold;
+				@include MediaQuery(1400px) {
+<<<<<<< HEAD
+					font-size: 40px;
+					line-height: normal;
+				}
+				@include MediaQuery($lg) {
+					font-size: 32px;
+				}
+				// @include MediaQuery($md) {
+				// 	font-size: 20px;
+				// }
+				@include MediaQuery($xs) {
+					font-size: 22px;
+					bottom: 15px;
+					padding: 0 15px;
+				}
+			}
+			.single__content {
+				padding: 50px 40px 80px;
+				font-family: SanFranciscoDisplay-Thin;
+				p {
+					font-size: 22px;
+					line-height: 20px;
+					font-family: vlabelpro;
+					color: #000;
+					font-family: SanFranciscoDisplay-Thin;
+					word-break: break-word;
+					margin-bottom: 15px;
+					@include MediaQuery($xs) {
+						font-size: 15px;
+						line-height: initial;
+					}
+				}
+=======
+					font-size: 70px;
+				}
+				
+				@include MediaQuery(1024px) {
+					font-size: 60px;
+				}
+				@include MediaQuery(928px) {
+					font-size: 40px;
+				}
+				@include MediaQuery(768px){
+					transform: translateY(-120%) translateX(3%);
+					width: 85%;
+					font-size: 30px;
+				}
+				@include MediaQuery(480px) {
+					font-size: 20px;
+				}
+			}
+			.single__content {
+				padding: 1rem 2rem;
+				@include MediaQuery(480px) {
+					padding: 0;
+					img:last-child {
+						width: 100%;
+					}
+				}
+				@include MediaQuery(768px) {
+					padding: 0;
+				}
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+			}
+			
+		}
+
+		.colum-right {
+			padding-left: 25px;
+			@media screen and (min-width: 1600px) {
+				max-width: 380px;
+				width: 100%;
+				flex: auto;
+			}
+			@include MediaQuery(1024px) {
+				padding-left: 0;
+			}
+<<<<<<< HEAD
+			.mc4wp-form {
+				margin-bottom: 50px;
+				@include MediaQuery($xs) {
+					margin-bottom: 25px;
+				}
+				&-input {
+					display: flex;
+					flex-direction: column;
+					input {
+						&:nth-child(2) {
+							margin-top: 5px;
+						}
+					}
+				}
+=======
+			@include MediaQuery(860px) {
+				flex: 0 0 95%;
+				max-width: 95%;
+				margin: 0 auto;
+				padding: 0%;
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+			}
+
+			.latest-post {
+				.line--black {
+					width: 100%;
+					color: #333;
+				}
+				&-title {
+					font-size: 40px;
+					margin-bottom: 20px;
+					font-weight: bold;
+					border-bottom: 1px solid #333;
+					line-height: 1;
+<<<<<<< HEAD
+					font-family: GMV-DIN-Pro-Medium;
+					@include MediaQuery(860px) {
+						font-size: 30px;
+					}
+=======
+					
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+				}
+				&-content {
+					a {
+						justify-content: space-between;
+						color: initial;
+						text-transform: uppercase;
+						margin-top: 10px;
+						display: block;
+						.row-divide {
+							width: 100%;
+						}
+<<<<<<< HEAD
+						&:nth-child(1) {
+							margin-top: 0;
+						}
+					}
+					&-thumbnail {
+						img {
+							display: block;
+							max-width: 137px;
+							max-height: 110px;
+							@include MediaQuery(1380px) {
+								padding-right: 10px;
+							}
+							@include MediaQuery($lg) {
+								max-width: 100%;
+								max-height: 100%;
+							}
+							@include MediaQuery($xs) {
+								padding-right: 0;
+							}
+=======
+						@include MediaQuery(1024px) {
+							flex: 0 0 40%;
+							max-width: 40%;
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+						}
+						@include MediaQuery(768px) {
+							flex: 0 0 40%;
+							max-width: 40%;
+						}
+						@include MediaQuery(340px) {
+							flex: 0 0 35%;
+							max-width: 35%;
+						}
+						
+					}
+					&-title {
+						font-size: 18px;
+						font-weight: bold;
+						font-family: SanFranciscoDisplay-Bold;
+						@include MediaQuery(1380px) {
+							font-size: 18px;
+							line-height: 18px;
+						}
+<<<<<<< HEAD
+						@include MediaQuery(1280px) {
+							font-size: 16px;
+							line-height: 16px;
+						}
+						@include MediaQuery($lg) {
+							font-size: 40px;
+							line-height: 55px;
+						}
+						@include MediaQuery($md) {
+							font-size: 30px;
+=======
+						@include MediaQuery(1024px) {
+							flex: 0 0 55%;
+							max-width: 55%;
+						}
+						@include MediaQuery(768px) {
+							flex: 0 0 55%;
+							max-width: 55%;
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+						}
+						@include MediaQuery($xs) {
+							font-size: 15px;
+							line-height: 21px;
+						}
+					}
+				}
+			}
+<<<<<<< HEAD
+			.single-subscribe {
+				color: var(--primary-color);
+				font-size: 90px;
+				line-height: 90px;
+				text-transform: uppercase;
+				font-weight: bold;
+				padding-top: 120px;
+				letter-spacing: -6px;
+				font-family: GMV-PRO-Bold;
+				@include MediaQuery(1600px) {
+					font-size: 80px;
+					line-height: 80px;
+					letter-spacing: -6px;
+				}
+				@include MediaQuery(1400px) {
+					font-size: 70px;
+					line-height: 70px;
+				}
+				@include MediaQuery(1200px) {
+					font-size: 60px;
+					line-height: 60px;
+					padding-top: 60px;
+				}
+				@include MediaQuery(1024px) {
+					font-size: 48px;
+					line-height: normal;
+					padding-top: 30px;
+					letter-spacing: initial;
+					text-align: center;
+				}
+				@include MediaQuery(860px) {
+					font-size: 35px;
+					padding-top: 20px;
+				}
+			}
+			.single--intro {
+				text-align: center;
+				padding: 0 35px;
+				font-size: 25px;
+				color: #000;
+				line-height: 25px;
+				font-family: Ultralight;
+				@include MediaQuery(1024px) {
+					font-size: 20px;
+				}
+				@include MediaQuery(860px) {
+					font-size: 16px;
+				}
+			}
+			p:nth-child(3) {
+				margin: 10px 0 18px;
+				@include MediaQuery(1400px) {
+					margin: 15px 0;
+				}
+				@include MediaQuery(1024px) {
+					margin: 1rem 0;
+				}
+				input {
+					padding: 15px;
+					font-size: 25px;
+					max-width: 100%;
+					border-radius: 10px;
+					border: 2px solid #000;
+					height: 50px;
+=======
+			.single__subscribe {
+				clear: both;
+				margin: 4rem 0 2rem 0;
+				&-title {
+					color: var(--primary-color);
+					font-size: 90px;
+					text-transform: uppercase;
+					font-weight: bold;
+
+					@include MediaQuery(1600px) {
+						font-size: 80px;
+					}
+					@include MediaQuery(1400px) {
+						font-size: 70px;
+					}
+					@include MediaQuery(1200px) {
+						font-size: 60px;
+					}
+					@include MediaQuery(1024px) {
+						font-size: 48px;
+					}
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+					@include MediaQuery(860px) {
+						font-size: 35px;
+					}
+				}
+<<<<<<< HEAD
+			}
+			.mc4wp-form-input {
+				input {
+					&::placeholder {
+						font-size: 25px;
+						color: #999999;
+						line-height: inherit;
+						font-weight: 300;
+					}
+				}
+			}
+			.mc4wp-submit {
+				text-align: end;
+				@include MediaQuery($lg) {
+					text-align: center;
+				}
+			}
+			.btn--submit {
+				height: 48px;
+				padding-top: 2px;
+				background: white;
+				background: -moz-linear-gradient(
+					0deg,
+					rgba(255, 255, 255, 0) 0%,
+					#eb5857 0%
+				);
+				background: -webkit-linear-gradient(
+					0deg,
+					rgba(255, 255, 255, 0) 0%,
+					#eb5857 0%
+				);
+				background: linear-gradient(
+					0deg,
+					rgba(255, 255, 255, 0) 0%,
+					#eb5857 0%
+				);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#eb5857",GradientType=1);
+				color: #fff !important;
+				font-size: 37px;
+				text-transform: uppercase;
+				font-weight: bold;
+				cursor: pointer;
+				border: #fff;
+				max-width: 200px;
+				width: 100%;
+				border-radius: 10px;
+				text-align: center;
+				@include MediaQuery(1400px) {
+					font-size: 25px;
+					padding: 10px 2rem;
+				}
+				@include MediaQuery(1024px) {
+					font-size: 20px;
+					padding: 10px 2rem;
+				}
+			}
+		}
+	}
+}
+.btn--submit {
+	color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+	.single-divide {
+		.colum-left {
+			.title-single {
+				// transform: translateY(-120%) translateX(3%);
+				width: 95%;
+				font-size: 40px;
+			}
+			.single__content {
+				padding: 0;
+				img:last-child {
+					width: 100%;
+					height: auto;
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 438px) {
+	.single-divide {
+		.colum-left {
+			margin: 0 auto;
+			.title-single {
+				// transform: translateY(-120%) translateX(3%);
+				font-size: 25px;
+=======
+				.single--intro {
+					text-align: center;
+					font-size: 25px;
+					@include MediaQuery(1024px) {
+						font-size: 20px;
+					}
+					@include MediaQuery(860px) {
+						text-align: left;
+					}
+				}
+				p:nth-child(3) {
+					margin: 2rem 0;
+					@include MediaQuery(1400px) {
+						margin: 15px 0;
+					}
+					@include MediaQuery(1024px) {
+						margin: 1rem 0;
+					}
+					input {
+						margin-bottom: 5px;
+						padding: 10px;
+						font-size: inherit;
+						width: 100%;
+						max-width: 100%;
+						border-radius: 10px;
+						border-width: 1px;
+						@include MediaQuery(860px) {
+							font-size: small;
+						}
+					}
+				}
+				.btn--submit {
+					padding: 15px;
+					background-color: var(--primary-color) !important;
+					color: #fff !important;
+					font-size: 25px;
+					text-transform: uppercase;
+					font-weight: bold;
+					padding-left: 3em;
+					padding-right: 3em;
+					cursor: pointer;
+					border: #fff;
+					border-radius: 30px;
+					float: right;
+					@include MediaQuery(1400px) {
+						font-size: 25px;
+						padding: 10px 2rem;
+					}
+					@include MediaQuery(1024px) {
+						font-size: 20px;
+						padding: 10px 2rem;
+					}
+					@include MediaQuery(860px) {
+						float: left;
+					}
+				}
+>>>>>>> 239346524e1d969b197a96869868de87b9ff08b0
+			}
+		}
+	}
+}
+
+

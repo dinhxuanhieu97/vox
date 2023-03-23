@@ -1,0 +1,406 @@
+:root {
+	--primary-bg-color: #eb5857;
+	--primary-color: #eb5857;
+}
+/*-----======Setup Color And Text======------*/
+
+/*-----=======Setup Font and main CSS======-----*/
+@font-face {
+	font-family: 'GMV DIN Pro';
+	font-weight: 300;
+	src: url('../../webfonts/GMV_DIN_Pro-Light.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'GMV DIN Pro';
+	font-weight: 500;
+	src: url('../../webfonts/GMV_DIN_Pro-Medium.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'GMV DIN Pro';
+	font-weight: 700;
+	src: url('../../webfonts/GMV_DIN_Pro-Bold.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 500;
+	src: url('../../webfonts/Roboto-Medium.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 700;
+	src: url('../../webfonts/Roboto-Black.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: vlabelpro;
+	font-weight: 500;
+	src: url('../../webfonts/VLABELPRO.OTF');
+	font-display: swap;
+}
+@font-face {
+	font-family: vlabelpro;
+	font-weight: 700;
+	src: url('../../webfonts/VLABELPRO-BOLD.OTF');
+	font-display: swap;
+}
+@font-face {
+	font-family: vlabelproBook;
+	src: url('../../webfonts/VLKALEKOROUND-BOOK.OTF');
+	font-display: swap;
+}
+@font-face {
+	font-family: Ultralight;
+	src: url('../../webfonts/SanFranciscoDisplay-Ultralight.otf');
+	font-display: swap;
+}
+@font-face {
+	font-family: Quakiez;
+	src: url('../../webfonts/Quakiez.otf');
+	font-display: swap;
+}
+@font-face {
+	font-family: Impact_0;
+	src: url('../../webfonts/Impact_0.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: UTM-AvoBold;
+	font-weight: 400;
+	src: url('../../webfonts/UTM-AvoBold.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: GMV-PRO-Bold;
+	font-weight: 700;
+	src: url('../../webfonts/GMV_DIN_Pro-Bold.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: GMV-DIN-Pro-Light;
+	font-weight: 400;
+	src: url('../../webfonts/GMV_DIN_Pro-Light.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: GMV-DIN-Pro-Medium;
+	font-weight: 400;
+	src: url('../../webfonts/GMV_DIN_Pro-Medium.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: SanFranciscoDisplay-Bold;
+	font-weight: 700;
+	src: url('../../webfonts/SanFranciscoDisplay-Bold.otf');
+	font-display: swap;
+}
+@font-face {
+	font-family: SanFranciscoDisplay-Thin;
+	font-weight: 700;
+	src: url('../../webfonts/SanFranciscoDisplay-Thin.otf');
+	font-display: swap;
+}
+@font-face {
+	font-family: SanFranciscoDisplay-Regular;
+	src: url('../../webfonts/SanFranciscoDisplay-Regular.otf');
+	font-display: swap;
+}
+@font-face {
+	font-family: Roboto-Medium;
+	src: url('../../webfonts/Roboto-Medium.ttf');
+	font-display: swap;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	overflow-x: hidden;
+}
+body {
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #333;
+	font-family: vlabelpro;
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+	&:focus {
+		outline: none !important;
+	}
+}
+::selection {
+	background-color: var(--primary-bg-color);
+	color: #fff;
+}
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--primary-bg-color);
+	border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--primary-bg-color);
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 35px;
+	@include MediaQuery($xs) {
+		padding: 0 15px;
+	}
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+.row-divide {
+	display: flex;
+	flex-wrap: wrap;
+}
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	background: transparent;
+	outline-color: transparent;
+	transition: all 0.5s;
+}
+.eclips-7-row {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;
+}
+.col-divide-1 {
+	flex: 0 0 1 * $colWidth;
+	max-width: 1 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-2 {
+	flex: 0 0 2 * $colWidth;
+	max-width: 2 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-3 {
+	flex: 0 0 3 * $colWidth;
+	max-width: 3 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-4 {
+	flex: 0 0 4 * $colWidth;
+	max-width: 4 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-5 {
+	flex: 0 0 5 * $colWidth;
+	max-width: 5 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-6 {
+	flex: 0 0 6 * $colWidth;
+	max-width: 6 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-7 {
+	flex: 0 0 7 * $colWidth;
+	max-width: 7 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-8 {
+	flex: 0 0 8 * $colWidth;
+	max-width: 8 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-9 {
+	flex: 0 0 9 * $colWidth;
+	max-width: 9 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-10 {
+	flex: 0 0 10 * $colWidth;
+	max-width: 10 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-11 {
+	flex: 0 0 11 * $colWidth;
+	max-width: 11 * $colWidth;
+	width: 100%;
+}
+
+.col-divide-12 {
+	flex: 0 0 100%;
+	max-width: 100%;
+	width: 100%;
+}
+.d- {
+	&block {
+		display: block !important;
+	}
+	&none {
+		display: none;
+	}
+}
+.dp- {
+	&block {
+		@include MediaQuery(1024px) {
+			display: block;
+		}
+	}
+}
+@include MediaQuery($lg) {
+	/*Row and divide*/
+	.col-divide-lg-12 {
+		flex: auto;
+		max-width: 100%;
+	}
+	.col-divide-lg-6 {
+		flex: auto;
+		max-width: 6 * $colWidth;
+	}
+	.col-divide-lg-5 {
+		flex: 0 0 5 * $colWidth;
+		max-width: 5 * $colWidth;
+		width: 100%;
+		padding: 0px 15px;
+	}
+	.col-divide-lg-4 {
+		flex: auto;
+		max-width: 4 * $colWidth;
+	}
+	.col-divide-lg-7 {
+		flex: 0 0 7 * $colWidth;
+		max-width: 7 * $colWidth;
+		width: 100%;
+		padding: 0px 15px;
+	}
+	.col-divide-lg-9 {
+		flex: 0 0 9 * $colWidth;
+		max-width: 9 * $colWidth;
+		width: 100%;
+		padding: 0px 15px;
+	}
+	.col-divide-lg-3 {
+		flex: auto;
+		max-width: 3 * $colWidth;
+	}
+}
+
+@include MediaQuery($md) {
+	/*Row and divide*/
+	.col-divide-md-12 {
+		flex: auto;
+		width: 100%;
+		max-width: 100%;
+	}
+	.col-divide-md-10 {
+		flex: auto;
+		max-width: 10 * $colWidth;
+	}
+	.col-divide-md-6 {
+		flex: auto;
+		max-width: 6 * $colWidth;
+	}
+	.col-divide-md-4 {
+		flex: auto;
+		max-width: 4 * $colWidth;
+	}
+	.col-divide-md-3 {
+		flex: auto;
+		max-width: 3 * $colWidth;
+	}
+	.col-divide-md-2 {
+		flex: auto;
+		max-width: 2 * $colWidth;
+	}
+	.title--section {
+		font-size: 30px;
+		margin: 22px 0px;
+	}
+	/*Setup*/
+}
+
+@include MediaQuery($xs) {
+	/*Row and divide*/
+	.col-divide-sm-12 {
+		flex: auto;
+		max-width: 100%;
+	}
+	.col-divide-sm-8 {
+		flex: auto;
+		max-width: 8 * $colWidth;
+	}
+	.col-divide-sm-6 {
+		flex: auto;
+		max-width: 6 * $colWidth;
+	}
+	.col-divide-sm-4 {
+		flex: auto;
+		max-width: 4 * $colWidth;
+	}
+	.col-divide-sm-3 {
+		flex: auto;
+		max-width: 3 * $colWidth;
+	}
+	/*Setup*/
+}
+input,
+textarea,
+select,
+button {
+	outline: none;
+}
+.page-template-ContentService .header--home .header__item-lang,
+.page-template-DesignService .header--home .header__item-lang,
+.page-template-EventService .header--home .header__item-lang,
+.page-template-StrategyService .header--home .header__item-lang,
+.page-template-VisualService .header--home .header__item-lang,
+.page-template-WebsiteService .header--home .header__item-lang {
+	background: transparent !important;
+	color: #fff !important;
+}

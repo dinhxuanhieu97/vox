@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&display=swap');
+.menu-setting-btn {
+	.btn {
+		color: #fff;
+		background: #1c6182;
+		opacity: 0.95;
+		margin-left: 2vw;
+		letter-spacing: 1.5px;
+		&:hover,
+		&:focus {
+			opacity: 1;
+			color: #fff;
+		}
+	}
+}
+.btn--upload {
+	color: #1c6182;
+	margin-left: 2vw;
+}
+#toplevel_page_hamburger-seting {
+	img {
+		height: 30px;
+		width: 30px;
+	}
+}
+#adminmenu div.wp-menu-name {
+	line-height: 22px;
+}
+#wpfooter,
+.add-new-menu-action,
+.subsubsub,
+#sample-permalink {
+	a {
+		color: #1c6182;
+		opacity: 0.95;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.wp-list-table {
+	img {
+		width: initial;
+		height: initial;
+	}
+}
+.wp-list-table {
+	a {
+		color: #1c6182;
+		opacity: 0.95;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.menu-setting {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.image--upload {
+	img {
+		width: auto;
+		height: 100px;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.container-editor {
+	max-width: 50vw;
+}
+.wp-admin {
+	img {
+		width: initial;
+	}
+	a {
+		color: #1c6182;
+		opacity: 0.95;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.menu-secondary__item {
+	margin-bottom: 0.5vw;
+	img {
+		height: 100px;
+		width: auto;
+	}
+	.label {
+		margin-left: 0.5vw;
+		margin-right: 0.5vw;
+		font-weight: 500;
+		text-decoration: underline;
+		&.label-1st {
+			margin-left: 0vw;
+		}
+	}
+}
+.vox--admin .mce-toolbar .mce-btn-group .mce-btn.mce-listbox {
+	display: none;
+}
+.pickr {
+	display: inline-block;
+}
+.finish--button {
+	position: absolute;
+	bottom: 10px;
+	right: 25%;
+}
+.plugin-card-top {
+	min-height: 186px;
+}
+.plugin-icon {
+	width: 128px !important;
+	height: 128px !important;
+}

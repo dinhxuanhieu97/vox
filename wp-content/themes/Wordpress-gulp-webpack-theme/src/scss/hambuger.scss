@@ -1,0 +1,195 @@
+.hambugerMenu {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000000;
+	color: #ffffff;
+	z-index: 2000;
+	display: none;
+	&__container {
+		position: relative;
+		&-close {
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			cursor: pointer;
+			i {
+				font-size: 30px;
+				color: #808080;
+			}
+		}
+		.hambugerMenu__content {
+			.hambugerMenu__divide {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				flex-direction: row-reverse;
+				@include MediaQuery($xs) {
+					flex-wrap: wrap;
+				}
+				.hambugerMenu__column-medium {
+					$raito: 440 / 1920 * 100%;
+					width: #{$raito};
+					@include MediaQuery(1024px) {
+						width: 50%;
+					}
+					padding-left: 65px;
+					padding-right: 25px;
+					@include MediaQuery($xs) {
+						width: 100%;
+						padding-left: 25px;
+						padding-right: 25px;
+					}
+					display: flex;
+					justify-content: space-between;
+					flex-direction: column;
+					height: 100vh;
+					.hambugerMenu__logo {
+						padding-top: 65px;
+						text-align: center;
+					}
+					.hamburgerMenu__list {
+						padding-bottom: 185px;
+						.menu {
+							list-style: none;
+							&-item {
+								a {
+									display: block;
+									font-size: calc(60px / 2);
+									line-height: calc(60px / 2);
+									font-weight: 700;
+									margin-bottom: 30px;
+									transition: all 0.25s
+										cubic-bezier(0.755, 0.05, 0.855, 0.06);
+								}
+								&.current-menu-item,
+								&:hover {
+									a {
+										color: var(--primary-color);
+									}
+								}
+							}
+						}
+					}
+					img {
+						width: 50%;
+					}
+				}
+				.hambugerMenu__column-small {
+					@include MediaQuery(1024px) {
+						display: none;
+					}
+					$raito: 690 / 1920 * 100%;
+					width: #{$raito};
+					display: flex;
+					justify-content: space-between;
+					flex-direction: column;
+					height: 100vh;
+					img {
+						width: initial;
+					}
+					.hambugerMenu__sec-item {
+						$raito: 100vh / 6;
+						width: 331px;
+						height: #{$raito};
+						margin-left: auto;
+						text-align: right;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						flex-direction: row-reverse;
+						position: relative;
+						&-text {
+							font-size: calc(158.51px / 2);
+							@media screen and (max-height: 900px) {
+								font-size: calc(148.51px / 2);
+							}
+							@media screen and (max-height: 800px) {
+								font-size: calc(138.51px / 2);
+							}
+							@media screen and (max-height: 768px) {
+								font-size: calc(128.51px / 2);
+							}
+							@media screen and (max-height: 600px) {
+								font-size: calc(90px / 2);
+							}
+							font-family: Impact_0;
+							.not--full--text {
+								opacity: 1;
+								width: 150px;
+								display: inline-block;
+								text-align: center;
+							}
+							.full--text {
+								opacity: 0;
+								display: inline-block;
+								width: 150px;
+								overflow: hidden;
+								line-height: 162.51px;
+								@media screen and (max-height: 900px) {
+									line-height: 150px;
+								}
+								@media screen and (max-height: 800px) {
+									line-height: 133px;
+								}
+								@media screen and (max-height: 768px) {
+									line-height: 128.51px;
+								}
+								@media screen and (max-height: 720px) {
+									line-height: 120.51px;
+								}
+								@media screen and (max-height: 600px) {
+									line-height: 100px;
+								}
+								transform: translateX(0);
+								position: absolute;
+								transition: all 0.75s ease-in-out;
+								top: 0px;
+								padding-left: 0px;
+								left: 0px;
+							}
+						}
+						img {
+							height: #{$raito};
+							width: auto;
+							display: inline-block;
+						}
+						&:hover {
+							.hambugerMenu__sec-item-text {
+								.not--full--text {
+									opacity: 0;
+								}
+								.full--text {
+									opacity: 1;
+									width: auto;
+									padding-left: 15px;
+									transform: translateX(calc(-100% + 145px));
+								}
+							}
+						}
+					}
+				}
+				.hambugerMenu__column-big {
+					$raito: (1920 - 690 -440) / 1920 * 100%;
+					width: #{$raito};
+					@include MediaQuery(1024px) {
+						width: 50%;
+					}
+					font-size: calc(72px / 2);
+					color: #999999;
+					line-height: 86.4px;
+					text-align: left;
+					padding-left: 101px;
+					@include MediaQuery($xs) {
+						display: none;
+					}
+					p {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}

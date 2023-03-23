@@ -1,0 +1,261 @@
+.contact-page-template {
+	padding-top: 146px;
+	padding-bottom: 75px;
+	.contact-page {
+		&__title {
+			h1 {
+				font-size: calc(125px / 2);
+				color: #ea5857;
+				font-weight: 700;
+				text-align: center;
+				font-family: 'GMV DIN Pro';
+				user-select: none;
+				@include MediaQuery(1621px) {
+					font-size: calc(100px / 2);
+				}
+				@include MediaQuery(1300px) {
+					font-size: calc(85px / 2);
+				}
+				@include MediaQuery($sm) {
+					font-size: calc(57px / 2);
+				}
+				@include MediaQuery($xs) {
+					font-size: calc(45px / 2);
+				}
+			}
+			margin-bottom: 20px;
+		}
+		&__divide {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		$raito: 560 / 1920 * 100%;
+		&__big {
+			flex: 0 0 calc(100% - #{$raito});
+			max-width: calc(100% - #{$raito});
+			@include MediaQuery(1024px) {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+			&-item {
+				margin-bottom: 28px;
+				&:nth-last-child(1),
+				&:nth-last-child(2) {
+					margin-bottom: 0px;
+				}
+				@include MediaQuery($sm) {
+					margin-bottom: 30px;
+				}
+				@include MediaQuery($xs) {
+					margin-bottom: 10px;
+				}
+				.label {
+					font-size: calc(60px / 2);
+					line-height: calc(60px / 2);
+					color: #000000;
+					font-weight: 500;
+					font-family: 'GMV DIN Pro';
+					user-select: none;
+					display: block;
+					margin-bottom: 15px;
+					@include MediaQuery(1300px) {
+						font-size: calc(60px / 2);
+					}
+					@include MediaQuery($sm) {
+						font-size: 30px;
+					}
+					@include MediaQuery($xs) {
+						font-size: 25px;
+					}
+				}
+				input {
+					display: block;
+					width: calc(100% - 130px);
+					@include MediaQuery(1024px) {
+						width: 100%;
+					}
+					height: 50px;
+					margin: auto 0px;
+					font-weight: 300;
+					font-family: Ultralight;
+					font-size: calc(41.25px / 2);
+					@include MediaQuery($sm) {
+						font-size: 30px;
+					}
+					@include MediaQuery($xs) {
+						font-size: 20px;
+					}
+					border: 2px solid #999999;
+					padding: 0px 46px;
+					@include MediaQuery($xs) {
+						padding: 0px 25px;
+						height: 62.5px;
+					}
+					&::placeholder {
+						color: #999999;
+					}
+				}
+				&-contain {
+					$checkbox: 100% / 3;
+					display: flex;
+					justify-content: flex-start;
+					flex-wrap: wrap;
+					max-width: calc(100% - 130px);
+					@include MediaQuery(1024px) {
+						max-width: 100%;
+					}
+					padding-top: 18px;
+					&-checkbox {
+						flex: 0 0 #{$checkbox};
+						max-width: #{$checkbox};
+						height: 264px;
+						@include MediaQuery($xs) {
+							flex: 0 0 50%;
+							max-width: 50%;
+							height: 180px;
+						}
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: #f2f2f2;
+						transition: all 0.2s linear;
+						cursor: pointer;
+						user-select: none;
+						font-size: calc(50px / 2);
+						line-height: 40px;
+						color: #000000;
+						font-weight: 500;
+						font-family: 'GMV DIN Pro';
+						@include MediaQuery($sm) {
+							font-size: 35px;
+						}
+						&:hover,
+						&.active {
+							background-color: #cccccc;
+						}
+					}
+				}
+				&-submit {
+					margin-top: 16px;
+					max-width: calc(100% - 130px);
+					@include MediaQuery(1024px) {
+						max-width: 100%;
+					}
+					text-align: right;
+					.btn {
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 10px;
+						background-color: #eb5d58;
+						color: #ffffff;
+						font-size: 25px;
+						font-weight: 700;
+						font-family: 'GMV DIN Pro';
+						width: 240px;
+						transform: scale(1);
+						height: 57.6px;
+						&:hover {
+							transform: scale(1.05);
+						}
+					}
+				}
+			}
+		}
+		&__small {
+			flex: 0 0 #{$raito};
+			max-width: #{$raito};
+			@include MediaQuery(1024px) {
+				flex: 0 0 100%;
+				max-width: 100%;
+				text-align: center;
+				margin-top: 30px;
+			}
+			&-top {
+				&-title {
+					margin-bottom: 15px;
+					h2 {
+						-webkit-text-fill-color: transparent;
+						-webkit-text-stroke-width: 3px;
+						-webkit-text-stroke-color: #000000;
+						font-weight: 500;
+						font-size: calc(98px / 2);
+						line-height: calc(98px / 2);
+						font-family: 'GMV DIN Pro';
+						margin-left: -5px;
+						user-select: none;
+						@include MediaQuery($xs) {
+							font-size: calc(98px / 3);
+						}
+					}
+				}
+				&-content {
+					a {
+						color: #000000;
+						text-decoration: underline;
+						font-weight: 500;
+						font-size: calc(45px / 2);
+						line-height: calc(45px / 2);
+						font-family: 'Roboto';
+						transition: all 0.25s
+							cubic-bezier(0.755, 0.05, 0.855, 0.06);
+						word-break: break-all;
+						@include MediaQuery($xs) {
+							font-size: calc(45px / 3);
+						}
+						&:hover {
+							color: #ea5857;
+						}
+					}
+				}
+			}
+			&-divide {
+				margin: 42px 0px;
+				height: 7px;
+				width: 140px;
+				background-color: #000000;
+				border-radius: 300px;
+				@include MediaQuery(1024px) {
+					margin: 42px auto;
+				}
+			}
+			&-bottom {
+				&-title {
+					h2 {
+						font-weight: 500;
+						font-size: calc(58px / 2);
+						line-height: calc(58px / 2);
+						color: #000000;
+						font-family: 'GMV DIN Pro';
+						user-select: none;
+						@include MediaQuery($xs) {
+							font-size: calc(58px / 3);
+						}
+					}
+				}
+				&-content {
+					margin-top: 33px;
+					margin-left: -30px;
+				}
+				&-social {
+					color: #000000;
+					user-select: none;
+					span {
+						font-size: calc(112px / 2);
+						width: auto;
+						height: calc(112px / 2);
+						@include MediaQuery(1385px) {
+							font-size: calc(112px / 3);
+							height: calc(112px / 3);
+						}
+					}
+					transition: all 0.25s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+					&:hover {
+						color: #ea5857;
+					}
+				}
+			}
+		}
+	}
+}

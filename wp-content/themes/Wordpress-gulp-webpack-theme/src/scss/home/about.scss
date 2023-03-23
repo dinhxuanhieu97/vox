@@ -1,0 +1,179 @@
+.home-page-template {
+	.about {
+		height: 100vh;
+		background-color: #000000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&__container {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+		&__subtitle {
+			text-align: center;
+			h2 {
+				display: none;
+				text-align: center;
+				// font-size: 240px;
+				font-size: 160px;
+				@include MediaQuery(879px) {
+					font-size: 200px;
+				}
+				@include MediaQuery(788px) {
+					font-size: 150px;
+				}
+				@include MediaQuery(527px) {
+					font-size: 100px;
+				}
+				@include MediaQuery(375px) {
+					font-size: 80px;
+				}
+				font-family: Quakiez;
+				font-weight: normal;
+				-webkit-text-fill-color: transparent;
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-stroke-color: #823030;
+				line-height: 0;
+				// padding-bottom: 144px;
+				padding-bottom: 72px;
+			}
+		}
+		&__title {
+			margin-top: 144px;
+			@include MediaQuery(788px) {
+				margin-top: 69px;
+			}
+			@include MediaQuery(527px) {
+				margin-top: 100px;
+			}
+			text-align: center;
+			h1 {
+				display: none;
+				// font-size: 470px;
+				font-size: 313.333px;
+				@include MediaQuery(879px) {
+					font-size: 400px;
+				}
+				@include MediaQuery(788px) {
+					font-size: 350px;
+				}
+				@include MediaQuery(527px) {
+					font-size: 250px;
+				}
+				@include MediaQuery(375px) {
+					font-size: 200px;
+				}
+				@include MediaQuery(320px) {
+					font-size: 180px;
+				}
+				font-family: Quakiez;
+				font-weight: normal;
+				-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-stroke-color: #823030;
+				line-height: 0px;
+			}
+		}
+		&__description {
+			display: none;
+			// font-size: 45px;
+			font-size: 22.5px;
+			width: 1335.509px;
+			font-family: SanFranciscoDisplay-Thin;
+			@include MediaQuery(1268px) {
+				font-size: 40px;
+				width: 1013px;
+			}
+			@include MediaQuery(1071px) {
+				font-size: 35px;
+				width: 900px;
+			}
+			@include MediaQuery(928px) {
+				font-size: 32px;
+				width: 811px;
+			}
+			@include MediaQuery(879px) {
+				font-size: 28px;
+				width: 750px;
+			}
+			@include MediaQuery(788px) {
+				font-size: 25px;
+				width: 700px;
+			}
+			@include MediaQuery(710px) {
+				font-size: 22px;
+				width: 95%;
+			}
+			@include MediaQuery($xs) {
+				font-size: 18px;
+				width: 95%;
+				p {
+					transform: translateY(-25px);
+				}
+			}
+			@include MediaQuery(320px) {
+				font-size: 15px;
+				width: 98%;
+			}
+			color: #ffffff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -20%);
+			text-align: center;
+			@media screen and (min-width: 1600px) {
+				// line-height: 48px;
+				line-height: 32px;
+				letter-spacing: 1px;
+			}
+			line-height: 0.9;
+		}
+	}
+}
+
+.slide-in-left {
+	animation: slide-in-left 0.5s ease-in-out both;
+}
+@keyframes slide-in-left {
+	0% {
+		transform: translateX(-1000px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.slide-in-right {
+	animation: slide-in-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s
+		both;
+}
+
+@keyframes slide-in-right {
+	0% {
+		transform: translateX(1000px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0s both;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

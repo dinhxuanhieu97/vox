@@ -1,0 +1,120 @@
+.footer {
+	background-color: red;
+	&__child {
+		background: #000000;
+		padding-top: 75px;
+		padding-bottom: 88px;
+		padding-left: 80px;
+		padding-right: 80px;
+		@include MediaQuery($lg) {
+			padding-top: 50px;
+			padding-bottom: 112px;
+		}
+		&-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		&-logo {
+			text-align: start;
+			img {
+				max-width: calc(418px / 2);
+				@include MediaQuery($xs) {
+					width: 100%;
+				}
+			}
+		}
+		.footer__main-info-content-item {
+			line-height: 45px;
+			@include MediaQuery(1380px) {
+				line-height: initial;
+			}
+		}
+		&-info {
+			margin-left: auto;
+			color: #fff;
+			// font-size: 40.5px;
+			// line-height: 40.5px;
+			font-size: 20.25px;
+			line-height: 20.25px;
+			align-items: center;
+			display: flex;
+			@include MediaQuery(1380px) {
+				font-size: 34px;
+			}
+			@include MediaQuery(1280px) {
+				font-size: 24px;
+				margin-left: 0;
+			}
+			@include MediaQuery($lg) {
+				margin-top: 30px;
+			}
+			.row-divide {
+				align-items: center;
+				width: 100%; //add code fix feedback
+				@include MediaQuery(1600px) {
+					justify-content: space-between;
+				}
+				@include MediaQuery($lg) {
+					width: 100%;
+				}
+				.col-info {
+					text-align: start;
+				}
+			}
+			.col-contact {
+				padding-left: 18px;
+				@include MediaQuery(1600px) {
+					padding-left: 0;
+				}
+				@include MediaQuery($xs) {
+					margin-bottom: 30px;
+				}
+				.title-label {
+					text-align: center;
+				}
+				.label-item {
+					text-transform: uppercase;
+					text-align: center;
+					// font-size: 72.9px;
+					font-size: 36.45px;
+					line-height: initial;
+					margin-top: -20px;
+					@include MediaQuery(1600px) {
+						font-size: 60px;
+					}
+					@include MediaQuery(1280px) {
+						font-size: 48px;
+					}
+					@include MediaQuery($xs) {
+						margin-top: 0;
+					}
+					.btn-request {
+						margin-top: 10px;
+					}
+				}
+				.btn-request-submit {
+					padding: 9px 32px;
+					// border: 5px solid var(--primary-color);
+					border: 2.5px solid var(--primary-color);
+					border-radius: 10px;
+					a {
+						// font-size: 40.5px;
+						font-size: 20.25px;
+						// line-height: 48px;
+						line-height: 24px;
+						color: var(--primary-color);
+						@include MediaQuery(1600px) {
+							font-size: 30px;
+							line-height: initial;
+						}
+						@include MediaQuery(1280px) {
+							font-size: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
